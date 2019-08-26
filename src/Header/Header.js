@@ -5,7 +5,7 @@ import './Header.scss';
 const Header = () => {
   return (
     <header>
-      <span className="logo">shorty</span>
+      <span className="logo">shortly</span>
       <nav>
         <ul>
           <li>

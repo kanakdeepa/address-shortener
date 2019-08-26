@@ -11,9 +11,11 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/shorten" component={Shorten} />
-          <Route path="/expand" component={Expand} />
-          <Redirect from="*" to="/shorten" component={Shorten} />
+          <div style={{ textAlign: 'center', marginTop: 20 }}>
+            <Route path="/shorten" component={Shorten} />
+            <Route path="/expand" component={Expand} />
+            <Redirect from="*" to="/shorten" component={Shorten} />
+          </div>
         </Switch>
       </BrowserRouter>
     </div>
