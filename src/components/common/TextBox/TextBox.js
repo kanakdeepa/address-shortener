@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './TextBox.scss';
 
 class TextBox extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      textValue: ''
+      textValue: this.props.value || ''
     };
   }
 
@@ -15,7 +16,7 @@ class TextBox extends Component {
   };
 
   render() {
-    const { placeholder, name } = this.props;
+    const { placeholder, name, readOnly } = this.props;
     const { textValue } = this.state;
 
     return (
@@ -29,6 +30,8 @@ class TextBox extends Component {
           name={name}
           placeholder={placeholder}
           onChange={this.changeHandler}
+          value={textValue}
+          readOnly={readOnly}
         />
       </div>
     );
@@ -36,3 +39,11 @@ class TextBox extends Component {
 }
 
 export default TextBox;
+
+TextBox.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  onTextChange: PropTypes.func,
+  value: PropTypes.string,
+  readOnly: PropTypes.bool
+};
