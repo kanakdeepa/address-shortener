@@ -5,18 +5,22 @@ import './TextBox.scss';
 class TextBox extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       textValue: this.props.value || ''
     };
   }
 
   changeHandler = evt => {
-    this.setState({ textValue: evt.target.value });
+    this.setState({
+      textValue: evt.target.value
+    });
+
     this.props.onTextChange(evt);
   };
 
   render() {
-    const { placeholder, name, readOnly } = this.props;
+    const { placeholder, name, readOnly, errored } = this.props;
     const { textValue } = this.state;
 
     return (
@@ -30,8 +34,9 @@ class TextBox extends Component {
           name={name}
           placeholder={placeholder}
           onChange={this.changeHandler}
-          value={textValue}
           readOnly={readOnly}
+          value={textValue}
+          className={errored ? 'errored' : null}
         />
       </div>
     );
@@ -45,5 +50,6 @@ TextBox.propTypes = {
   placeholder: PropTypes.string,
   onTextChange: PropTypes.func,
   value: PropTypes.string,
-  readOnly: PropTypes.bool
+  readOnly: PropTypes.bool,
+  errored: PropTypes.any
 };
