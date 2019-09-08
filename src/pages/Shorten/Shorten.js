@@ -116,6 +116,7 @@ const Shorten = () => {
           onTextChange={changeHandler}
           errored={erroredFields.postcode}
           value={formData.postcode || ''}
+          type="number"
         />
         <TextBox
           name="country"

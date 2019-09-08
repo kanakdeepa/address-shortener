@@ -8,6 +8,7 @@ const TextBox = ({
   name,
   readOnly,
   errored,
+  type,
   onTextChange
 }) => {
   return (
@@ -15,7 +16,7 @@ const TextBox = ({
       {value ? <span className="tiny-placeholder">{placeholder}</span> : null}
 
       <input
-        type="text"
+        type={type || 'text'}
         name={name}
         placeholder={placeholder}
         onChange={onTextChange}
@@ -35,5 +36,6 @@ TextBox.propTypes = {
   onTextChange: PropTypes.func,
   value: PropTypes.string,
   readOnly: PropTypes.bool,
-  errored: PropTypes.bool
+  errored: PropTypes.bool,
+  type: PropTypes.string
 };
