@@ -9,12 +9,14 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/shorten" activeClassName="active">
+            <NavLink to="/" exact activeClassName="active">
               Shorten!
             </NavLink>
           </li>
           <li>
-            <NavLink to="/expand">Expand!</NavLink>
+            <NavLink to="/expand" activeClassName="active">
+              Expand.
+            </NavLink>
           </li>
         </ul>
       </nav>
