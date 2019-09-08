@@ -1,19 +1,20 @@
 {
   "addresses": [
     {
-      "block": "572",
-      "id": 1,
+      "block": "571",
       "area": "Upper Serangoon Rd",
       "unit": "08-03",
-      "postcode": 534798,
-      "handle": "routbisu"
+      "building": "The Yardley",
+      "postcode": "534798",
+      "handle": "routbisu",
+      "id": 1
     },
     {
-      "block": "403",
-      "area": "Upper Serangoon Rd",
-      "unit": "08-03",
-      "postcode": 534798,
-      "handle": "kanakdeepa",
+      "block": "403A",
+      "area": "Serangoon Ave",
+      "unit": "10-02",
+      "postcode": "534767",
+      "handle": "hdb1",
       "id": 2
     }
   ]
