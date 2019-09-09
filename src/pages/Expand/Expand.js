@@ -20,10 +20,12 @@ const Expand = () => {
           setError('');
         } else {
           setError('The address is not found!');
+          setAddress({});
         }
       })
       .catch(err => {
         setError('There was an unexpected error!');
+        setAddress({});
         console.log('err', err);
       });
     evt.preventDefault();
